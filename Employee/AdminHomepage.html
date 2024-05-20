@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #637A9F;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #9DBC98;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #637A9F;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .announcements, .faqs {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .announcements {
+            background-color: #EEEDEB;
+            margin-right: 10px;
+        }
+        .faqs {
+            background-color: #EEEDEB;
+            margin-left: 10px;
+        }
+        .image-container {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        /* Dropdown Button */
+        .dropdown {
+            position: relative;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    z-index: 1;
+    top: 100%; /* Positions the dropdown menu below the parent */
+    left: 0; /* Aligns the dropdown menu with the left side of the parent */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: inline-block;
+}
+
+/* Style the links inside the dropdown menu */
+.dropdown-menu li {
+    display: inline-block;
+}
+
+.dropdown-menu li a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+}
+
+/* Change the background color of the dropdown links on hover */
+.dropdown-menu li a:hover {
+    background-color: #ddd;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Payroll Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./AdminHomepage.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Employee</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./AddEmployee.html">Add</a></li>
+                    <li><a href="./UpdateEmployee.html">Update</a></li>
+                    <li><a href="./SearchEmployee.html">Search</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Pay Slips</a></li>
+            <li><a href="#">Approval</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="announcements">
+            <h2>Announcements</h2>
+            <p>Important announcements will be displayed here.</p>
+        </div>
+        <div class="image-container">
+            <img src="https://media.designrush.com/articles/221762/conversions/payroll-management-system-details.jpg
+            " alt="Image description">
+        </div>
+        <div class="faqs">
+            <h2>FAQs</h2>
+            <p>Frequently Asked Questions will be displayed here.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Employee Payroll Management System</p>
+        <div>
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>

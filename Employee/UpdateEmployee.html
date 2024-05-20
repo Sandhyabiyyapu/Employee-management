@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee Details</title>
+    <style>
+        body {
+            background-color: #637A9F;
+            font-family: Arial, sans-serif;
+        }
+
+        #Add_Emp_Main_Heading {
+            background-color: #9DBC98;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        #Add_Emp_Sal_Container {
+            background-color: #EEEDEB;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        .input-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .labels {
+            flex: 1;
+            text-align: left;
+            margin-left: 25%;
+        }
+
+        .inputs {
+            flex: 1;
+            margin-right: 40%;
+            width: 100px;
+        }
+
+        .gender-buttons
+        {
+            flex: 1;
+            margin-right: 40%;
+        }
+        .submit-button{
+            margin-left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div id="Add_Emp_Main_Heading">
+        <h1>Update Employee Details</h1>
+    </div>
+    <div id="Add_Emp_Sal_Container">
+        <form>
+            <div class="input-row">
+                <label for="empId" class="labels">Employee Id</label>
+                <input type="text" id="empId" name="empId" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="nic" class="labels">NIC</label>
+                <input type="text" id="nic" name="nic" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="firstName" class="labels">First Name</label>
+                <input type="text" id="firstName" name="firstName" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="lastName" class="labels">Last Name</label>
+                <input type="text" id="lastName" name="lastName" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="dob" class="labels">Date of Birth</label>
+                <input type="text" id="dob" name="dob" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="address" class="labels">Address</label>
+                <input type="text" id="address" name="address" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="city" class="labels">City</label>
+                <input type="text" id="city" name="city" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="homeContact" class="labels">Home Contact</label>
+                <input type="text" id="homeContact" name="homeContact" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="mobileContact" class="labels">Mobile Contact</label>
+                <input type="text" id="mobileContact" name="mobileContact" class="inputs">
+            </div>
+            
+            <div class="input-row">
+                <label class="labels">Gender</label>
+                <div class="gender-buttons">
+                    <label for="male" ><input type="radio" value="Male" id="male" name="gender"> Male</label>
+                    <label for="female" ><input type="radio" value="Female" id="female" name="gender"> Female</label>
+                    <label for="other" ><input type="radio" value="Other" id="other" name="gender"> Other</label>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <label for="designation" class="labels">Designation</label>
+                <input type="text" id="designation" name="designation" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="department" class="labels">Department</label>
+                <input type="text" id="department" name="department" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="doj" class="labels">Date of joining</label>
+                <input type="text" id="doj" name="doj" class="inputs">
+            </div>
+
+            <div class="input-row">
+                <label for="salaryType" class="labels">Salary Type</label>
+                <select id="salaryType" name="salaryType" class="inputs">
+                    <option value="Monthly">Monthly</option>
+                    <option value="Quarterly">Quarterly</option>
+                    <option value="Half-Yearly">Half-Yearly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+            </div>
+
+            <div class="input-row">
+                <label for="salaryAmount" class="labels">Salary Amount</label>
+                <input type="text" id="salaryAmount" name="salaryAmount" class="inputs">
+            </div>
+
+            <div class="submit-button" ID="Update">
+                <input type="submit" value="OK">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

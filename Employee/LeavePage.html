@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application</title>
+    <style>
+        body {
+            background-color: #637a9f;
+            font-family: Arial, sans-serif;
+        }
+        #heading {
+            background-color: #9dbc98;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 100%;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        #details-container {
+            width: 90%;
+            border: 2px solid black;
+            padding: 25px;
+            background-color: white;
+            margin-bottom: 15px;
+            background-color: #eeedeb;
+        }
+        #allowances-container {
+            width: 45%;
+            border: 2px solid black;
+            padding: 25px;
+            background-color: white;
+            margin-bottom: 15px;
+            background-color: #eeedeb;
+        }
+        #deductions-container {
+            width: 45%;
+            border: 2px solid black;
+            padding: 25px;
+            background-color: white;
+            margin-bottom: 15px;
+            background-color: #eeedeb;
+        }
+        .button {
+            height: 30px;
+            width: 100px;
+            margin: 20px auto;
+            display: block;
+        }
+        .input-row {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .labels {
+            flex-basis: 40%;
+            text-align: left;
+            margin-right: 10px;
+        }
+        .inputs, .small-input {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .sub-headings {
+            display: flex;
+            justify-content: flex-end;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sub-label {
+            flex: 1;
+            text-align: center;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        .percentage-container, .amount-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <h1>Leave Application</h1>
+    </div>
+    <div id="container">
+        <div id="details-container">
+            <h3 style="text-align:center;">Employee Details</h3>
+            <div class="input-row">
+                <label for="empId" class="labels">Employee Id</label>
+                <input type="text" id="empId" name="empId" class="inputs" >
+            </div>
+            <div class="input-row">
+                <label for="firstName" class="labels">First Name</label>
+                <input type="text" id="firstName" name="firstName" class="inputs" >
+            </div>
+            <div class="input-row">
+                <label for="lastName" class="labels">Last Name</label>
+                <input type="text" id="lastName" name="lastName" class="inputs" >
+            </div>
+            
+            <div class="input-row">
+                <label for="designation" class="labels">Designation</label>
+                <input type="text" id="designation" name="designation" class="inputs">
+            </div>
+            <div class="input-row">
+                <label for="department" class="labels">Department</label>
+                <input type="text" id="department" name="department" class="inputs">
+            </div>
+            <div class="input-row">
+                <label for="salaryType" class="labels">Salary Type</label>
+                <input type="text" id="salaryType" name="salaryType" class="inputs">
+            </div>
+            <div class="input-row">
+                <label for="basicSalary" class="labels">Basic Salary</label>
+                <input type="text" id="basicSalary" name="basicSalary" class="inputs">
+            </div>
+        </div>
+        <div style="display: flex; width: 90%;">
+            <div id="allowances-container">
+                <h3>Salary Allowances</h3>
+                <div class="sub-headings">
+                    <span class="sub-label">Percentage</span>
+                    <span class="sub-label">Amount</span>
+                </div>
+                <div class="input-row">
+                    <label for="travelAllowancePercentage" class="labels">Travel Allowance</label>
+                    <div class="input-group">
+                        <div class="percentage-container">
+                            <input type="text" id="travelAllowancePercentage" name="travelAllowancePercentage" class="small-input">
+                        </div>
+                        <div class="amount-container">
+                            <input type="text" id="travelAllowanceAmount" name="travelAllowanceAmount" class="small-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <label for="foodAllowance" class="labels">Food Allowance</label>
+                    <div class="input-group">
+                        <input type="text" id="foodAllowancePercentage" name="foodAllowancePercentage" class="small-input">
+                        <input type="text" id="foodAllowanceAmount" name="foodAllowanceAmount" class="small-input">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <label for="performanceBonus" class="labels">Performance Bonus</label>
+                    <div class="input-group">
+                        <input type="text" id="performanceBonusPercentage" name="performanceBonusPercentage" class="small-input">
+                        <input type="text" id="performanceBonusAmount" name="performanceBonusAmount" class="small-input">
+                    </div>
+                </div>
+            </div>
+            <div id="deductions-container">
+                <h3>Salary Deductions</h3>
+                <div class="sub-headings">
+                    <span class="sub-label">Percentage</span>
+                    <span class="sub-label">Amount</span>
+                </div>
+                <div class="input-row">
+                    <label for="epfPercentage" class="labels">EPF</label>
+                    <div class="input-group">
+                        <div class="percentage-container">
+                            <input type="text" id="epfPercentage" name="epfPercentage" class="small-input">
+                        </div>
+                        <div class="amount-container">
+                            <input type="text" id="epfAmount" name="epfAmount" class="small-input">
+                        </div>
+                    </div>
+                </div>
+                    <div class="input-row">
+                        <label for="tax" class="labels">Tax</label>
+                        <div class="input-group">
+                            <input type="text" id="taxPercentage" name="taxPercentage" class="small-input">
+                            <input type="text" id="taxAmount" name="taxAmount" class="small-input">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <label for="paye" class="labels">Paye</label>
+                        <div class="input-group">
+                            <input type="text" id="payePercentage" name="payePercentage" class="small-input">
+                            <input type="text" id="payeAmount" name="payeAmount" class="small-input">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Apply" class="button">
+    <input type="submit" value="Cancel" class="button">
+</body>
+</html>

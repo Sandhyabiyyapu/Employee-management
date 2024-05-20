@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Payslip</title>
+<style>
+    body {
+        background-color: #637A9F; /* Same background color as the login page */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #9DBC98; /* Background color similar to the login page */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: white; /* Text color similar to the login page */
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    tr{
+         background-color:#EEEDEB;
+   }
+    th {
+        background-color: #EEEDEB; /* Header background color similar to the login page */
+        color: black; /* Header text color similar to the login page */
+    }
+    .button-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .button:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Employee Payslip</h1>
+    <table>
+        <tr>
+            <th>Employee ID</th>
+            <td>EMP1234</td>
+        </tr>
+        <tr>
+            <th>Employee Name</th>
+            <td>ABCD</td>
+        </tr>
+        <tr>
+            <th>Month</th>
+            <td>March 2024</td>
+        </tr>
+        <tr>
+            <th>Basic Salary</th>
+            <td>Rs.100000</td>
+        </tr>
+        <tr>
+            <th>Allowances</th>
+            <td>Rs.10000</td>
+        </tr>
+        <tr>
+            <th>Deductions</th>
+            <td>Rs.5000</td>
+        </tr>
+        <tr>
+            <th>Total Pay</th>
+            <td>Rs.105000</td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <button class="button" onclick="window.print()">Print</button>
+        <button class="button" onclick="window.location.href='#'">Download</button>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        background-color: #637A9F;
+    }
+    #main_heading {
+        background-color: #9DBC98;
+        color: white;
+        height: 75px;
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 25px;
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    #login {
+        background-color: #EEEDEB;
+        border: 2px solid black;
+        padding: 25px;
+        height: 250px;
+        font-size: larger;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 100px auto 0;
+        width: 50%;
+    }
+    .button {
+        height: 30px;
+        width: 60px;
+        margin-top: 5px;
+        margin-left: 40%;
+    }
+    #login label {
+        margin-left: 0;
+    }
+    .forgot-password {
+        margin-top: 10px;
+        font-size:13px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+
+<div id="main_heading">
+    <h1>EMPLOYEE PAYROLL MANAGEMENT SYSTEM</h1>
+</div>
+
+<div id="login">
+    <form id="loginForm" action="#" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+        </div>
+        <div>
+            <input type="radio" id="user" name="role" value="user">
+            <label for="user">User</label>
+            <input type="radio" id="admin" name="role" value="admin" checked>
+            <label for="admin">Admin</label><br>
+        </div>
+        <div class="forgot-password">
+            <a href="ForgetPassword.html">Forgot Password?</a>
+        </div><br>
+        <button type="submit" class="button">Login</button>
+        
+    </form>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var role = document.querySelector('input[name="role"]:checked').value;
+
+        // Perform your login logic here
+        // For demo purposes, let's just redirect based on role
+        if (role === 'admin') {
+            window.location.href = 'AdminHomepage.html'; // Redirect to admin home page
+        } else {
+            window.location.href = 'EmployeeHomePage.html'; // Redirect to user home page
+        }
+    });
+</script>
+</body>
+</html>
